@@ -10,7 +10,6 @@ export const ambil_data_pertama = () => {
 };
 
 export const pindah_next = (Action) => {
-  console.log(Action);
   return {
     type: PINDAH_NEXT,
     payload: Action,

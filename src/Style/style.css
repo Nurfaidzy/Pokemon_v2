@@ -557,10 +557,6 @@ video {
   display: grid;
 }
 
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
@@ -569,17 +565,12 @@ video {
   justify-content: center;
 }
 
-.gap-10 {
-  gap: 2.5rem;
-}
-
 .gap-40 {
   gap: 10rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .py-10 {
