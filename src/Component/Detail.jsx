@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Detail = () => {
   const poke = useSelector((state) => state.DetailReducer);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (poke.nama === null) {
+      navigate("/");
+    }
+  }, []);
 
-  console.log(poke);
   return (
     <div>
       <div>{poke.nama}</div>
