@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./Style/style.css";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { ambil_data_pertama } from "./Redux/Action/Actiondata1";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const data = useSelector((state) => state.PageReducer);
+  console.log(data);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(ambil_data_pertama());
+  }, []);
+
+  return <div className="font-bold">sdsds</div>;
 }
 
 export default App;
