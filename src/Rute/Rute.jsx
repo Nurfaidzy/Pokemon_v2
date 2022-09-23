@@ -5,8 +5,8 @@ import Detail from "../Component/Detail";
 const Rute = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/detail" element={<Detail />} />
+      <Route path="/Pokemon_v2/" element={<HomePage />} />
+      <Route path="/Pokemon_v2/detail" element={<Detail />} />
     </Routes>
   );
 };

@@ -8,9 +8,8 @@ const Card = ({ data }) => {
   const navigate = useNavigate();
   const pindah = (props) => {
     dispatch(kirim_detail(props));
-    navigate("/detail");
+    navigate("/Pokemon_v2/detail");
   };
-  console.log(data);
   return (
     <div className="py-[5%] bg-cover">
       <div className="text-center uppercase font-bold text-4xl text-yellow-500 py-20">

@@ -7,7 +7,7 @@ const Detail = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (poke.nama === null) {
-      navigate("/");
+      navigate("/Pokemon_v2/");
     }
   }, []);
 
