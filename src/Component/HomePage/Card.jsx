@@ -26,7 +26,7 @@ const Card = ({ data }) => {
               <div className="flex justify-center">
                 <img
                   src={x.sprites.front_default}
-                  className="w-[100px] h-fit"
+                  className="w-[100px] h-fit "
                   alt={x.name}
                 />
               </div>
@@ -54,7 +54,10 @@ const Card = ({ data }) => {
       </div>
       <div className="flex justify-center py-10 gap-10">
         <div>
-          <button onClick={() => dispatch(pindah_next(data.next))}>
+          <button
+            className="bg-yellow-500 p-4 rounded-xl font-bold shadow-lg"
+            onClick={() => dispatch(pindah_next(data.next))}
+          >
             Liat lebih banyak?
           </button>
         </div>
