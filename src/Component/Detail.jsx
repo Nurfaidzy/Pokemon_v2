@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Detail = () => {
   const poke = useSelector((state) => state.DetailReducer);
@@ -12,7 +13,7 @@ const Detail = () => {
   }, []);
 
   return (
-    <div
+    <motion.div
       className="py-[8%] px-[10%] bg-cover h-screen "
       style={{
         backgroundImage:
@@ -20,7 +21,12 @@ const Detail = () => {
       }}
     >
       <div className="flex justify-center ">
-        <div className="grid grid-cols-1 gap-10 bg-white/60 w-fit p-[5%] rounded-lg shadow-lg backdrop-blur-lg">
+        <motion.div
+          initial={{ y: 100, opacity: 0, scale: 0.5 }}
+          whileInView={{ y: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="grid grid-cols-1 gap-10 bg-white/60 w-fit p-[5%] rounded-lg shadow-lg backdrop-blur-lg"
+        >
           <div className="text-center font-bold capitalize text-6xl  ">
             {poke.nama}
           </div>
@@ -97,9 +103,9 @@ const Detail = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
